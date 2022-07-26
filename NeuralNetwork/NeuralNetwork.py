@@ -14,6 +14,7 @@ class Genotype:
         return 1/(1+np.exp(-x))
 
     def getOutput(self, x):
+         #forward pass algorithm based on algorithm by Siraj Raval https://www.youtube.com/watch?v=h3l4qz76JhQ
         l0=x
         l1=self.nonlin(np.dot(l0, self.syn0))
         l2=self.nonlin(np.dot(l1,self.syn1))
